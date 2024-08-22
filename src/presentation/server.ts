@@ -11,6 +11,9 @@ export class Server {
 
 
     //Llamando a CronService
-    CronService.createJob();
+    CronService.createJob('*/5 * * * * *', () => {const date = new Date(); console.log('cada 5 segundos ', date)} );
   }
 }
+
+
+
